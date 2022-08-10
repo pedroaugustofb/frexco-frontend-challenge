@@ -70,7 +70,10 @@ const HomeController = (props: Props) => {
     let notFound: boolean = true;
 
 
-    if(products.length === 0) products.push({name: product, quant: 1})
+    if(products.length === 0) {
+      products.push({name: product, quant: 1})
+      notFound = false;
+    }
 
     else{
       products.forEach( (elem: Products) => {
